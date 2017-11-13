@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Week_10_Project.Repositories;
+using Week_10_Project.Models;
 
 namespace Week_10_Project.Controllers
 {
@@ -41,8 +42,40 @@ namespace Week_10_Project.Controllers
         [HttpPost]
         public IActionResult Add(string brand)
         {
-            CarRepository.AddCar(brand);
+            CarRepository.AddCar();
             return RedirectToAction("List");
+        }
+
+        [Route("/{id}/delete")]
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            CarRepository.DeleteCar(id);
+            return RedirectToAction("List");
+        }
+
+        [Route("/{id}/update")]
+        [HttpPost]
+        public IActionResult Update(int id)
+        {
+            var car = CarRepository.Updating(id);
+            return View(car);
+        }
+
+        [Route("/{id}/edit")]
+        [HttpPost]
+        public IActionResult Edit(Car car)
+        {
+            CarRepository.UpdateTodo(car);
+            return RedirectToAction("List");
+        }
+
+        [Route("/{id}/singleinfo")]
+        [HttpGet]
+        public IActionResult SingleInfo(int id)
+        {
+            var todo = CarRepository.Updating(id);
+            return View(todo);
         }
     }
 }

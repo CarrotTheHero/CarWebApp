@@ -21,13 +21,27 @@ namespace Week_10_Project.Repositories
             return CarContext.Cars.ToList();
         }
 
-        public void AddCar(string brand, string model)
+        public void AddCar()
         {
-            var car = new Car()
-            {
-                Brand = brand,
-                Model = model
-            }
+        }
+
+        public void DeleteCar(int id)
+        {
+            Car deletedCar = CarContext.Cars.FirstOrDefault(x => x.Id == id);
+            CarContext.Cars.Remove(deletedCar);
+            CarContext.SaveChanges();
+        }
+
+        public Car Updating(int id)
+        {
+            return CarContext.Cars.FirstOrDefault(x => x.Id == id);
+        }
+
+        public void UpdateTodo(Car car)
+        {
+            CarContext.Cars.Update(car);
+            CarContext.SaveChanges();
+
         }
     }
 }
