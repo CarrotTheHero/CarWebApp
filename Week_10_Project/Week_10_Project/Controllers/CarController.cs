@@ -24,9 +24,25 @@ namespace Week_10_Project.Controllers
         }
 
         [Route("/{id}/carinfo")]
+        [HttpGet]
         public IActionResult Info()
         {
             return View();
+        }
+
+        [Route("/add")]
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        [Route("/add")]
+        [HttpPost]
+        public IActionResult Add(string brand)
+        {
+            CarRepository.AddCar(brand);
+            return RedirectToAction("List");
         }
     }
 }

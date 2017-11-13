@@ -20,5 +20,14 @@ namespace Week_10_Project.Repositories
         {
             return CarContext.Cars.ToList();
         }
+
+        public void AddCar(string brand, string model)
+        {
+            var car = new Car()
+            {
+                Brand = brand,
+                Model = model
+            }
+        }
     }
 }
