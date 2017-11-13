@@ -1,0 +1,16 @@
+﻿@model Week_10_Project.Models.Car
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <form action="/add" method="post">
+        <input type="text" name="Brand" value="@Model.Brand" />
+        <input type="text" name="Model" value="@Model.Model" />
+        <input type="text" name="BuildYear" value="@Model.BuildYear" />
+        <button type="submit">Send</button>
+    </form>
+    <h3><a href="/" class="btn btn-danger">Cancel</a></h3>
+</body>
+</html>

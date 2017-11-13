@@ -35,12 +35,12 @@ namespace Week_10_Project.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            return View();
+            return View(new Car());
         }
 
         [Route("/add")]
         [HttpPost]
-        public IActionResult Add(string brand)
+        public IActionResult Add(Car car)
         {
             CarRepository.AddCar();
             return RedirectToAction("List");

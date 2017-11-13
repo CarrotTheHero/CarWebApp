@@ -23,6 +23,11 @@ namespace Week_10_Project.Repositories
 
         public void AddCar()
         {
+            var car = new Car()
+            {
+
+            };
+            CarContext.Cars.Add(car);
         }
 
         public void DeleteCar(int id)

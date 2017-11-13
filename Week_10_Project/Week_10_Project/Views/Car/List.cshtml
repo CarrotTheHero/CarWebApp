@@ -1,8 +1,28 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model List<Week_10_Project.Models.Car>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
 </head>
 <body>
-    <p>haddelhad</p>
+    <h1>List of Your Cars</h1>
+    <h2><a href="/add">Add a new Car</a></h2>
+                <table border="1">
+                    <tr>
+                        <td>Id</td>
+                        <td>Brand</td>
+                        <td>Model</td>
+                        <td>Year of Build</td>
+                    </tr>
+                    @foreach (var car in Model)
+                    {
+                        <tr>
+                            <td>@car.Id</td>
+                            <td>@car.Brand</td>
+                            <td>@car.Model</td>
+                            <td>@car.BuildYear</td>
+                        </tr>
+                    }
+                </table>
 </body>
 </html>
