@@ -5,12 +5,12 @@
     <link rel="stylesheet" href="~/css/StyleSheet.css">
 </head>
 <body>
-    <h1>List of Your Cars</h1>
-    <h2><a href="/add">Add a new Car</a></h2>
+    <h1>List Of The Cars</h1>
+    <h2><a href="/add">Feel Free To Add A Car</a></h2>
     @foreach (var car in Model)
     {
         <div class="card">
-            <img src=@car.ImageLink alt="Avatar" style="width:150px">
+            <img src=@car.ImageLink alt="Avatar" style="height:120px">
             <div class="container">
                 <h4><b>@car.Model</b></h4>
                 <p>Build Year: @car.BuildYear</p>

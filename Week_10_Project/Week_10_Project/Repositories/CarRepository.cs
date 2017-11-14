@@ -21,14 +21,14 @@ namespace Week_10_Project.Repositories
             return CarContext.Cars.ToList();
         }
 
-        public void AddCar(string model, int buildyear, double acceleration, int hp, int topspeed, int weight, string imagelink)
+        public void AddCar(string model, int buildyear, double acceleration, int horsepower, int topspeed, int weight, string imagelink)
         {
             var car = new Car()
             {
                 Model = model,
                 BuildYear = buildyear,
                 Acceleration = acceleration,
-                HorsePower = hp,
+                HorsePower = horsepower,
                 TopSpeed = topspeed,
                 Weight = weight,
                 ImageLink = imagelink,
