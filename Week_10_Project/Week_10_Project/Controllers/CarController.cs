@@ -21,7 +21,7 @@ namespace Week_10_Project.Controllers
         [HttpGet]
         public IActionResult Welcome()
         {
-            return View();
+            return View(CarRepository);
         }
 
         [Route("/list")]
