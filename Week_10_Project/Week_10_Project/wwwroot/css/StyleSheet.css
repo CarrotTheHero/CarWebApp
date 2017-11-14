@@ -49,3 +49,8 @@ h2 {
     font-size: 30px;
     text-decoration: underline;
 }
+
+#Welcome_Page {
+    position:center;
+    text-align:center;
+}

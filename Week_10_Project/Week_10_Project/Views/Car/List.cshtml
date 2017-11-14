@@ -6,6 +6,7 @@
 </head>
 <body>
     <h1>List Of The Cars</h1>
+    <h3><a href="/">Back To Welcome Menu</a></h3>
     <h2><a href="/add">Feel Free To Add A Car</a></h2>
     @foreach (var car in Model)
     {
@@ -23,11 +24,11 @@
                 <input type="hidden" name="Id" value="@car.Id" />
                 <button id="table" class="number btn btn-danger" type="submit">Delete</button>
             </form>
-                <form action="/(@car.Id)/update" method="post">
-                    <input type="hidden" name="Id" value="@car.Id" />
-                    <button id="table" class="number btn btn-danger" type="submit">Edit</button>
-                </form>
-</div>
+            <form action="/(@car.Id)/update" method="post">
+                <input type="hidden" name="Id" value="@car.Id" />
+                <button id="table" class="number btn btn-danger" type="submit">Edit</button>
+            </form>
+        </div>
     }
 </body>
 </html>

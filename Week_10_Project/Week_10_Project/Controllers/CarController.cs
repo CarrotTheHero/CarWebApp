@@ -19,16 +19,16 @@ namespace Week_10_Project.Controllers
 
         [Route("/")]
         [HttpGet]
+        public IActionResult Welcome()
+        {
+            return View();
+        }
+
+        [Route("/list")]
+        [HttpGet]
         public IActionResult List()
         {
             return View(CarRepository.GetAll());
-        }
-
-        [Route("/{id}/carinfo")]
-        [HttpGet]
-        public IActionResult Info()
-        {
-            return View();
         }
 
         [Route("/add")]
@@ -68,14 +68,6 @@ namespace Week_10_Project.Controllers
         {
             CarRepository.UpdateTodo(car);
             return RedirectToAction("List");
-        }
-
-        [Route("/{id}/singleinfo")]
-        [HttpGet]
-        public IActionResult SingleInfo(int id)
-        {
-            var todo = CarRepository.Updating(id);
-            return View(todo);
         }
     }
 }
