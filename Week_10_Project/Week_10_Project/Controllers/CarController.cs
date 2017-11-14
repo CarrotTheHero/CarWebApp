@@ -40,9 +40,9 @@ namespace Week_10_Project.Controllers
 
         [Route("/add")]
         [HttpPost]
-        public IActionResult Add(Car car)
+        public IActionResult Add(string model, int buildyear, double acceleration, int hp, int topspeed, int weight, string imagelink)
         {
-            CarRepository.AddCar();
+            CarRepository.AddCar(model, buildyear, acceleration, hp, topspeed, weight, imagelink);
             return RedirectToAction("List");
         }
 

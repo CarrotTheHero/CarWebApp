@@ -7,29 +7,27 @@
 <body>
     <h1>List of Your Cars</h1>
     <h2><a href="/add">Add a new Car</a></h2>
-                <table border="1">
-                    <tr>
-                        <td>Id</td>
-                        <td>Model</td>
-                        <td>Year of Build</td>
-                        <td>Acceleration</td>
-                        <td>Horse Power</td>
-                        <td>Top Speed</td>
-                        <td>Weight</td>
-                    </tr>
-                    @foreach (var car in Model)
-                    {
-                        <tr>
-                            <td>@car.Id</td>
-                            <td>@car.Model</td>
-                            <td>@car.BuildYear</td>
-                            <td>@car.Acceleration</td>
-                            <td>@car.HorsePower</td>
-                            <td>@car.TopSpeed</td>
-                            <td>@car.Weight</td>
-                            <td>@car.ImageLink</td>
-                        </tr>
-                    }
-                </table>
+    @foreach (var car in Model)
+    {
+        <div class="card">
+            <img src=@car.ImageLink alt="Avatar" style="width:150px">
+            <div class="container">
+                <h4><b>@car.Model</b></h4>
+                <p>Build Year: @car.BuildYear</p>
+                <p>Acceleration: @car.Acceleration Sec</p>
+                <p>Horse Power: @car.HorsePower Le</p>
+                <p>Top Speed: @car.TopSpeed Mph</p>
+                <p>Weight: @car.Weight Kg</p>
+            </div>
+            <form action="/(@car.Id)/delete" method="post">
+                <input type="hidden" name="Id" value="@car.Id" />
+                <button id="table" class="number btn btn-danger" type="submit">Delete</button>
+            </form>
+                <form action="/(@car.Id)/update" method="post">
+                    <input type="hidden" name="Id" value="@car.Id" />
+                    <button id="table" class="number btn btn-danger" type="submit">Edit</button>
+                </form>
+</div>
+    }
 </body>
 </html>

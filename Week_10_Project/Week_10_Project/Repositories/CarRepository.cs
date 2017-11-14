@@ -21,13 +21,20 @@ namespace Week_10_Project.Repositories
             return CarContext.Cars.ToList();
         }
 
-        public void AddCar()
+        public void AddCar(string model, int buildyear, double acceleration, int hp, int topspeed, int weight, string imagelink)
         {
             var car = new Car()
             {
-
+                Model = model,
+                BuildYear = buildyear,
+                Acceleration = acceleration,
+                HorsePower = hp,
+                TopSpeed = topspeed,
+                Weight = weight,
+                ImageLink = imagelink,
             };
             CarContext.Cars.Add(car);
+            CarContext.SaveChanges();
         }
 
         public void DeleteCar(int id)

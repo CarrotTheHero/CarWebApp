@@ -6,9 +6,20 @@
 </head>
 <body>
     <form action="/add" method="post">
-        <input type="text" name="Brand" value="@Model.Brand" />
+        <label for="Model">Model:</label>
         <input type="text" name="Model" value="@Model.Model" />
+        <label for="BuildYear">Build Year:</label>
         <input type="text" name="BuildYear" value="@Model.BuildYear" />
+        <label for="Acceleration">Acceleration:</label>
+        <input type="text" name="Acceleration" value="@Model.Acceleration" />
+        <label for="HorsePower">Horse Power:</label>
+        <input type="text" name="HorsePower" value="@Model.HorsePower" />
+        <label for="TopSpeed">Top Speed:</label>
+        <input type="text" name="TopSpeed" value="@Model.TopSpeed" />
+        <label for="Weight">Weight:</label>
+        <input type="text" name="Weight" value="@Model.Weight" />
+        <label for="ImageLink">Image Source:</label>
+        <input type="text" name="ImageLink" value="@Model.ImageLink" /> <br />
         <button type="submit">Send</button>
     </form>
     <h3><a href="/" class="btn btn-danger">Cancel</a></h3>

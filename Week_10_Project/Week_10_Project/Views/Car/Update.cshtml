@@ -1,7 +1,22 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model Week_10_Project.Models.Car
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
 </head>
 <body>
+    @using (Html.BeginForm("edit", "car"))
+    {
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <p><strong>Model:</strong> @Html.TextBoxFor(car => car.Model) <br /> </p>
+        <p><strong>Build Year:</strong> @Html.TextBoxFor(car => car.BuildYear) <br /> </p>
+        <p><strong>Acceleration:</strong> @Html.TextBoxFor(car => car.Acceleration) <br /> </p>
+        <p><strong>Horse Power:</strong> @Html.TextBoxFor(car => car.HorsePower) <br /> </p>
+        <p><strong>Top Speed:</strong> @Html.TextBoxFor(car => car.TopSpeed) <br /> </p>
+        <p><strong>Weight:</strong> @Html.TextBoxFor(car => car.Weight) <br /> </p>
+        <p><strong>Image Link:</strong> @Html.TextBoxFor(car => car.ImageLink) <br /> </p>
+        <button type="submit">Edit This Car!</button>
+    }
+    <br /><h3><a href="/">Cancel</a></h3>
 </body>
 </html>
