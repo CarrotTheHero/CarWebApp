@@ -11,8 +11,6 @@ namespace Week_10_Project.Repositories
     {
         CarContext CarContext;
 
-        public string password = "brumbrum";
-
         public CarRepository(CarContext carContext)
         {
             CarContext = carContext;
