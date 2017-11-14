@@ -1,0 +1,65 @@
+﻿body {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+    position: static;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+    margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+    width: auto;
+}
+
+.img-wrapper {
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+    .img-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+.cardie {
+    margin-bottom: 10px;
+}
+
+.container-full {
+    margin: 30px auto;
+    width: 100%;
+}
+
+#detailslink {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.introimg {
+    height: 400px;
+    padding: 0% 0;
+}
+
+.socialicon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.sociallink {
+    display: inline-block;
+}

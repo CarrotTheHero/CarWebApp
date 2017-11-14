@@ -8,7 +8,7 @@ using Week_10_Project.Entities;
 namespace Week_10_Project.Migrations
 {
     [DbContext(typeof(CarContext))]
-    [Migration("20171113133320_InitialCreate")]
+    [Migration("20171114114327_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,26 +19,22 @@ namespace Week_10_Project.Migrations
 
             modelBuilder.Entity("Week_10_Project.Models.Car", b =>
                 {
-                    b.Property<string>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Brand");
+                    b.Property<double>("Acceleration");
 
                     b.Property<int>("BuildYear");
 
-                    b.Property<string>("CarBody");
-
-                    b.Property<string>("Color");
-
-                    b.Property<string>("FuelType");
-
                     b.Property<int>("HorsePower");
+
+                    b.Property<string>("ImageLink");
 
                     b.Property<string>("Model");
 
-                    b.Property<int>("Seats");
+                    b.Property<int>("TopSpeed");
 
-                    b.Property<int>("Torque");
+                    b.Property<int>("Weight");
 
                     b.HasKey("Id");
 

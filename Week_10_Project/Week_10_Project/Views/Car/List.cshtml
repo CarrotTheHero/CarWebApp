@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <link rel="stylesheet" href="~/css/StyleSheet.css">
 </head>
 <body>
     <h1>List of Your Cars</h1>
@@ -10,17 +10,24 @@
                 <table border="1">
                     <tr>
                         <td>Id</td>
-                        <td>Brand</td>
                         <td>Model</td>
                         <td>Year of Build</td>
+                        <td>Acceleration</td>
+                        <td>Horse Power</td>
+                        <td>Top Speed</td>
+                        <td>Weight</td>
                     </tr>
                     @foreach (var car in Model)
                     {
                         <tr>
                             <td>@car.Id</td>
-                            <td>@car.Brand</td>
                             <td>@car.Model</td>
                             <td>@car.BuildYear</td>
+                            <td>@car.Acceleration</td>
+                            <td>@car.HorsePower</td>
+                            <td>@car.TopSpeed</td>
+                            <td>@car.Weight</td>
+                            <td>@car.ImageLink</td>
                         </tr>
                     }
                 </table>

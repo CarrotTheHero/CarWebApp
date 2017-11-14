@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Week_10_Project.Migrations
 {
@@ -12,16 +13,15 @@ namespace Week_10_Project.Migrations
                 name: "Cars",
                 columns: table => new
                 {
-                    Id = table.Column<string>(nullable: false),
-                    Brand = table.Column<string>(nullable: true),
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    Acceleration = table.Column<double>(nullable: false),
                     BuildYear = table.Column<int>(nullable: false),
-                    CarBody = table.Column<string>(nullable: true),
-                    Color = table.Column<string>(nullable: true),
-                    FuelType = table.Column<string>(nullable: true),
                     HorsePower = table.Column<int>(nullable: false),
+                    ImageLink = table.Column<string>(nullable: true),
                     Model = table.Column<string>(nullable: true),
-                    Seats = table.Column<int>(nullable: false),
-                    Torque = table.Column<int>(nullable: false)
+                    TopSpeed = table.Column<int>(nullable: false),
+                    Weight = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
