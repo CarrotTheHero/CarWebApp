@@ -1,9 +1,24 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model Week_10_Project.Repositories.CarRepository
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" href="~/css/StyleSheet.css">
 </head>
-<body id="Welcome_Page">    
+<body id="Welcome_Page">
     <h1>Welcome Here My Friend!</h1>
-    <p><a href="/game">Start Game</a> / <a href="/list">Edit List</a></p>
+    <p><a href="/game">Start Game</a></p>
+    Password:
+    <br /><input id='password' type='text' />
+    <a href="/list" onclick="javascript:return validatePass()"><br />Car List</a>
+    <script>
+        function validatePass() {
+            if (document.getElementById('password').value == 'brumbrum') {
+                return true;
+            } else {
+                alert('Wrong Password!!');
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
